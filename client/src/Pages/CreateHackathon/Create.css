@@ -1,0 +1,32 @@
+.formContainer{
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    margin-top: auto;
+}
+.form-elements{
+    margin-top:2em;
+}
+
+.form-elements>label{
+    font-weight: bold;
+}
+
+.form-button{
+    width:10em;
+   height:2em;
+   border-radius: 7px;
+   background-color: #44924c;
+   border: 2px solid #44924c;
+   color: white;
+   font-weight: bold;
+   margin: 8px;
+}
+.form-button:hover{
+    cursor: pointer;
+}
+#heading{
+    background-color: rgb(222, 218, 218);
+}

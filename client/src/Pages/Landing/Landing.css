@@ -1,0 +1,77 @@
+.landingPageContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 70vh;
+    background-color: #003145;
+}
+.headText{
+   font-size: 1.6em;
+   font-weight: bold;
+   color:white;
+   border-left: 10px solid #FFCE5C;
+   padding: 5px;
+}
+.imgDiv{
+width: 30vw;
+min-height: 70vh;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+
+.textDiv{
+width: 70vw;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 70vh;
+}
+
+.textDivHeading{
+    max-width: 35vw;
+    font-size: larger;
+    min-height: 18vh;
+   
+    margin-top: -15vh;
+
+    
+}
+.createButton
+{
+    background-color: white;
+    color: #003145;
+    width: 200px;
+    height:45px;
+    border-radius: 12px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.createButton:hover{
+    cursor: pointer;
+}
+
+.landBanner{
+    min-height: 30vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002A3B;
+}
+.landInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+    width: 33vw;
+    height: 50px;
+    color: white;
+    font-weight: bolder;
+    border-right: 2px solid white;
+    padding: 15px;
+}
