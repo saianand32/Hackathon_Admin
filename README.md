@@ -69,7 +69,9 @@
 Go to the project directory
 
 
-**Backend Server:**
+
+
+### Backend Server:
 
 1. Setup Backend (use yarn) - 
 
@@ -80,6 +82,16 @@ Go to the project directory
 ```bash
  yarn install
 ```
+
+Note : If npm install does not work try -
+```bash
+  npm config set legacy-peer-deps true
+```
+and then - 
+```bash
+  npm install
+```
+
 Start backend server
 
 ```bash
@@ -87,7 +99,7 @@ Start backend server
 ```
 
 
-**Frontend Server:**
+### Frontend Server:
 
 
 ```bash
@@ -99,6 +111,16 @@ Install all dependencies (use yarn)
 ```bash
  yarn install
 ```
+
+Note : If npm install does not work try -
+```bash
+  npm config set legacy-peer-deps true
+```
+and then - 
+```bash
+  npm install
+```
+
 Start frontend server
 
 ```bash
