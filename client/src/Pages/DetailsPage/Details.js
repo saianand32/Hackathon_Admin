@@ -102,7 +102,7 @@ function Details() {
         <button className="yellow"> <i className="fa-regular fa-clock"></i> {text} {day}  {hour}  {minute}</button>
         <h1>{etitle}</h1>
         <h4>
-          React Hook useEffect contains a call to 'setId'. Without a list of{" "}
+           This is a generalized descrition. Hackathon description is below.
         </h4>
         <div className="level" style={{ backgroundColor: "black", zIndex: "1000" }}>
           <img src="" alt="" />
