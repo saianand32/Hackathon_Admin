@@ -28,6 +28,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin-top: 100px;
 min-height: 70vh;
 }
 
@@ -75,3 +76,34 @@ min-height: 70vh;
     border-right: 2px solid white;
     padding: 15px;
 }
+
+@media only screen and (max-width: 780px) {
+    #para{
+        font-size: 14px;
+    }
+    .headText{
+        font-size: 1.3em;
+    }
+    .createButton{
+   
+    width: 170px;
+    height:38px;
+    
+}
+  }
+@media only screen and (max-width: 500px) {
+    #para{
+        display: none;
+    }
+    .headText{
+        font-size: 1em;
+    }
+    .createButton{
+   
+        width: 140px;
+        height:30px;
+        font-weight: bolder;
+        font-size: 13px;
+        
+    }
+  }

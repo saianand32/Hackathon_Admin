@@ -10,15 +10,20 @@ import Details from "./Pages/DetailsPage/Details";
 function App() {
   return (
     <HackathonState>
+
       <BrowserRouter>
-        <Header/>
+
+        <Header />
+
         <Routes>
           <Route exact path="/" element={<Main />}></Route>
-          <Route exact path="/create" element={<Create/>}></Route>
-          <Route exact path="/edit" element={<Edit/>}></Route>
-          <Route exact path="/detail" element={<Details/>}></Route>
+          <Route exact path="/create" element={<Create />}></Route>
+          <Route exact path="/edit" element={<Edit />}></Route>
+          <Route exact path="/detail" element={<Details />}></Route>
         </Routes>
+
       </BrowserRouter>
+
     </HackathonState>
   );
 }

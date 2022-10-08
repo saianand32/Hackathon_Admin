@@ -10,9 +10,8 @@ app.use(express.json()); // middleware to use req.body since its json format
 connectToMongo(); // connect to mongodb database
 
 // Available Routes
-// app.use("/api/auth", require("./routes/auth"));
 app.use('/api/Hackathons',require('./routes/Hackathons'));
 
 app.listen(port, () => {
-  console.log(`TaskinglyPro listening on port ${port}`);
+  console.log(`DPhi hackathons listening on port ${port}`);
 });

@@ -4,6 +4,7 @@ import Info from '../Info/Info'
 import Landing from '../Landing/Landing'
 
 function Main() {
+ 
   return (
     <>
       <Landing/>

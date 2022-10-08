@@ -20,19 +20,19 @@ function Hackathons() {
   const [search, setSearch] = useState("");
   const classes = useStyles();
   const [selected, setSelected] = useState([]);
-  const [text, setText] = useState(["Filter"]);
+  const text=["Filter"];
   const isAllSelected = options.length > 0 && selected.length === options.length;
 
   useEffect(() => {
     getChallenges();
-  }, []);
+  });
 
   const updateChallenge = (currentChallenge) => {
     setNewchal({ id: currentChallenge._id, etitle: currentChallenge.title, edescription: currentChallenge.description, estart: currentChallenge.start, eend: currentChallenge.end, elevel: currentChallenge.level })
-    window.localStorage.setItem('id',currentChallenge._id);
-    let arr = [currentChallenge._id,currentChallenge.title,currentChallenge.description,currentChallenge.start,currentChallenge.end,currentChallenge.level,currentChallenge.image];
+    window.localStorage.setItem('id', currentChallenge._id);
+    let arr = [currentChallenge._id, currentChallenge.title, currentChallenge.description, currentChallenge.start, currentChallenge.end, currentChallenge.level, currentChallenge.image];
 
-    window.localStorage.setItem('array',JSON.stringify(arr));
+    window.localStorage.setItem('array', JSON.stringify(arr));
   }
 
   const isActive = (challenge) => {
@@ -51,7 +51,7 @@ function Hackathons() {
     return false;
   }
 
-  const handleOnChange =(e)=> {
+  const handleOnChange = (e) => {
     setSearch(e.target.value);
   }
 
@@ -70,57 +70,57 @@ function Hackathons() {
         <h2>Explore Challenges</h2>
         <div className="search">
           <i className="fa fa-search"></i>
-          <input type="text" className="form-control"  onChange={handleOnChange} placeholder="Search" />
-       
+          <input type="text" className="form-control" onChange={handleOnChange} placeholder="Search" />
 
-        <FormControl className={classes.formControl} style={{marginLeft:"50px",marginTop:"-4px",backgroundColor:"white"}}>
-        <InputLabel id="mutiple-select-label" style={{fontWeight:"bold",fontSize:"1em",marginLeft:"70px"}}>Filter</InputLabel>
-      <Select
-        labelId="mutiple-select-label"
-        multiple
-        defaultValue={text}
-        value={selected}
-        onChange={handleChange}
-        renderValue={() => [""]}
-        MenuProps={MenuProps}
-      >
-        <MenuItem
-          value="all"
-          classes={{
-            root: isAllSelected ? classes.selectedAll : ""
-          }}
-        >
-          <ListItemIcon>
-            <Checkbox
-              classes={{ indeterminate: classes.indeterminateColor }}
-              checked={isAllSelected}
-              indeterminate={
-                selected.length > 0 && selected.length < options.length
-              }
-            />
-          </ListItemIcon>
-          <ListItemText
-            classes={{ primary: classes.selectAllText }}
-            primary="Select All"
-          />
-        </MenuItem>
-        {options.map((option) => (
-          <MenuItem key={option} value={option}>
-            <ListItemIcon>
-              <Checkbox checked={selected.indexOf(option) > -1} />
-            </ListItemIcon>
-            <ListItemText primary={option} />
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+
+          <FormControl className={classes.formControl} style={{ marginLeft: "50px", marginTop: "-4px", backgroundColor: "white" }}>
+            <InputLabel id="mutiple-select-label" style={{ fontWeight: "bold", fontSize: "1em", marginLeft: "70px" }}>Filter</InputLabel>
+            <Select
+              labelId="mutiple-select-label"
+              multiple
+              defaultValue={text}
+              value={selected}
+              onChange={handleChange}
+              renderValue={() => [""]}
+              MenuProps={MenuProps}
+            >
+              <MenuItem
+                value="all"
+                classes={{
+                  root: isAllSelected ? classes.selectedAll : ""
+                }}
+              >
+                <ListItemIcon>
+                  <Checkbox
+                    classes={{ indeterminate: classes.indeterminateColor }}
+                    checked={isAllSelected}
+                    indeterminate={
+                      selected.length > 0 && selected.length < options.length
+                    }
+                  />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{ primary: classes.selectAllText }}
+                  primary="Select All"
+                />
+              </MenuItem>
+              {options.map((option) => (
+                <MenuItem key={option} value={option}>
+                  <ListItemIcon>
+                    <Checkbox checked={selected.indexOf(option) > -1} />
+                  </ListItemIcon>
+                  <ListItemText primary={option} />
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
         </div>
         <div className='filtersDiv'>
           {
-            selected.map((e)=>{
-              return(
-                <FilterComponent title={e}/>
+            selected.map((e) => {
+              return (
+                <FilterComponent title={e} />
               );
             })
           }
@@ -128,7 +128,7 @@ function Hackathons() {
       </div>
       <div className='gridContainer'>
         <div className='grid' >
-          {challenge.map((challenge) => {
+           {challenge.map((challenge) => {
 
             if (search.length === 0) {
               if (selected.length === 0 || selected.includes(challenge.level) || selected.includes("All")) return (<Card challenge={challenge} updateChallenge={updateChallenge} key={challenge._id} />);
@@ -143,10 +143,11 @@ function Hackathons() {
                 if (isFinished(challenge)) return (<Card challenge={challenge} updateChallenge={updateChallenge} key={challenge._id} />);
             }
             else
-              if(challenge.title.toLowerCase().includes(search)) return (<Card challenge={challenge} updateChallenge={updateChallenge} key={challenge._id} />);
+              if (challenge.title.toLowerCase().includes(search)) return (<Card challenge={challenge} updateChallenge={updateChallenge} key={challenge._id} />);
 
-              // return(<h1 style={{color:"white"}}>No Events Match your Search</h1>);
+            return <></>
           })}
+          
         </div>
       </div>
     </>

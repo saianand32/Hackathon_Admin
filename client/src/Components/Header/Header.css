@@ -1,5 +1,14 @@
 .navHeader{
-    height: 6vh;
+    height: 7vh;
     width: 100vw;
     text-align: left;
+}
+.navLogo{
+    display:flex;
+    margin-left:2.3em;
+    padding-top:2px;
+}
+.navLogo>h4{
+    padding: 7px;
+    font-weight: bold;
 }

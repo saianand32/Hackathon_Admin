@@ -41,6 +41,39 @@
     padding-top: 20px;
 
 }
+.editbtn{
+  width:10em;
+   height:2.6em;
+   border-radius: 7px;
+   background-color: #44924c;
+   border: 2px solid #44924c;
+   color: white;
+   font-weight: bold;
+   margin: 8px;
+}
+.delbtn{
+  width:10em;
+   height:2.6em;
+   border-radius: 7px;
+   background-color: white;
+   border: 2px solid red;
+   color: red;
+   font-weight: bold;
+   margin: 8px;
+}
+
+#leveldiv{
+display: flex;
+justify-content: space-around;
+color: #003145;
+background-color:white;
+width:8em;
+border: none;
+padding: 5px;
+font-weight: bold;
+border-radius: 5px;
+
+}
 
 @media only screen and (max-width: 680px) {
     .yellow {
