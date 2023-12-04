@@ -1,5 +1,4 @@
-# DPhi_Frontend_task
-# ⭕ Hackathons Page Task
+# ⭕ Hackathons Site
 
 * Built completely using ReactJs, java script, nodejs and MongoDB.
 
